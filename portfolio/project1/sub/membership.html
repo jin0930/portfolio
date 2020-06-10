@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>구트쇼콜라드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+    
+<script>
+    $(document).ready(function(){
+        $('.tabSet').each(function(){
+		var topDiv = $(this);
+		var anchors = topDiv.find('ul.tabs a');
+		var panelDivs = topDiv.find('div.schokolade');
+		var lastAnchor;
+		var lastPanel;
+
+		anchors.show();
+		lastAnchor = anchors.filter('.on');
+		lastPanel = $(lastAnchor.attr('href'));
+		panelDivs.hide();
+		lastPanel.show();
+		
+		anchors.click(function(){
+			//event.preventDefault();
+			var currentAnchor = $(this);
+			var currentPanel = $(currentAnchor.attr('href'));
+			lastAnchor.removeClass('on');
+			lastPanel.hide();
+
+			currentAnchor.addClass('on');
+			currentPanel.show();
+
+			
+			lastAnchor = currentAnchor;
+			lastPanel = currentPanel;
+		});
+
+        });
+    });
+    
+    
+    
+    
+    
+    </script>
+
+    
+    <link href="../css/sub.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+    
+    
+<body>
+<header id="header">
+    <div class="header_inner">
+    <h1 class="logo"><a href="../index.html"><img src="../images/main/gut_logo.png" alt="구트쇼콜라드 로고"></a></h1>
+    
+    <ul id="gnb">
+        <li><a href="../sub/brand.html">BRAND</a></li>
+        <li><a href="../sub/product.html">PRODUCT</a></li>
+        <li><a href="../sub/store.html">STORE</a></li>
+        <li><a href="../sub/gutnews_notice.html">GUT NEWS</a></li>
+        <li><a href="../sub/membership.html">MEMBERSHIP</a></li>
+    </ul><!--gnb종료-->
+
+        
+    </div><!--header_inner--종료-->
+</header><!--header종료-->
+    
+    
+<section id="sub_visual" class="sv5">
+    <div class="visual_txt">
+    <h2>MEMBERSHIP</h2>
+    <p class="sub_stit">구트쇼콜라드의<br>
+       다양한 혜택이 담긴 멤버십을 소개합니다.</p>
+    <p class="breadcrumb"><a href="../index.html" title="홈으로 가기">HOME &rsaquo;</a> MEMBERSHIP</p>
+        
+    </div><!--visual_txt종료-->
+</section><!--sub_visual종료-->
+
+    
+<div id="contents">
+    
+    <div id="membership">
+
+    <section class="membership_card">
+        <img src="../images/sub/membership_card.png" alt="멤버십 카드 이미지 설명">
+
+    
+    <h2>구트 멤버십카드를 아시나요?</h2>
+    <p>지금 바로 매장을 방문해서 멤버십 카드를 발급받아보세요.<br>
+    상품 구매 시 포인트 적립 및 이벤트 당첨의 행운까지!<br>
+    모이면 모일수록 더 큰 행복이 돌아오는<br>
+    구트쇼콜라드만의 다양한 혜택을 만나보세요.</p>
+ </section>
+    
+    
+
+    <div id="membership_contents">
+        
+    <h2>발급방법</h2>
+        <p class="card_issued">매장방문 후 직원에게 문의시 서류작성 이후 실물 카드 발급이 가능합니다. 발급 문의전화 ( <span>TEL.051-753-5600</span> )</p>
+    
+    <h2>혜택안내</h2>
+    <p class="guide_title">포인트 적립</p>
+    <p class="point_desc">제품 구매 시마다 제품 가격의 10%가 포인트 적립이 됩니다. (단 이벤트 상품 제외)<br>
+    5,000 포인트 이상 적립시 현금처럼 사용 가능 합니다. ( 1 포인트 &rarr; 10원 )</p>
+        
+   <p class="guide_title">매장 방문시 쿠폰 발급</p>
+   <p class="coupon_desc">매월 1회 매장 방문시 제품 20% 할임쿠폰 발급 혜택을 받으실 수 있습니다.</p>
+        
+   <p class="guide_title">멤버십 회원 초콜릿 증정</p>
+   <p class="chocolate_desc">카드 발급시 SMS , 이메일 수신동의 해주신 분에 한해서 1년에 2회 무료 초콜릿 교환권을 드립니다.<br>
+   (수신 비동의 고객님은 혜택을 받으실 수 없습니다. 가입 후 수정가능)</p>
+    
+   
+   <h2>발급시 유의사항</h2>
+   <p class="mem_notice">
+    <span>1. 멤버십 혜택은 SMS , 이메일 수신동의 고객님에게만 안내됩니다.<br>
+    - 매장방문시 해당사항 수정가능<br></span>
+    <span>2.최근 1년간 구매가 없을 경우 , 보유한 포인트가 모두 소멸됩니다.<br></span>
+    3.멤버십 전용 혜택은 회사방침에 따라 변경될 수 있습니다.</p>
+    
+   </div>
+
+    </div>
+</div><!--contents종료-->
+
+
+
+
+<div id="footer">
+    <article class="footer_inner">
+        
+        <p class="foot_logo"><img src="../images/main/gut_footer_logo.png" alt="구트 푸터 로고"></p>
+        
+        <ul class="foot_link">
+        <li><a href="sub/brand.html">홈페이지건의사항</a></li>
+        <li><a href="sub/brand.html">개인정보처리방침</a></li>
+        <li><a href="sub/brand.html">이용약관</a></li>
+        <li><a href="sub/brand.html">사이트맵</a></li>
+        </ul>
+        
+        <address>부산광역시 부산진구 중앙대로 708 부산파이낸스센터 4F,5F<br>
+        개인정보책임관리자 :  이혜진 ※본 페이지는 상업적용도가 아닌 포트폴리오용도로 만든 개인 홈페이지 입니다.※<br>
+        COPYRIGHT 2020 GUT SCHOKOLADE. All rights reserverd.     </address>
+        
+        <ul class="sns">
+            <li><a href="#"><img src="../images/main/sns_facebook.png" alt="페이스북"></a></li>
+            <li><a href="#"><img src="../images/main/sns_insta.png" alt="인스타그램"></a></li>
+        </ul>
+</article><!--footer_inner종료-->
+    
+</div><!--footer종료-->
+</body>
+</html>

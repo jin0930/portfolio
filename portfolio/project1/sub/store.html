@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>구트쇼콜라드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+    
+<script>
+    $(document).ready(function(){
+        $('.tabSet').each(function(){
+		var topDiv = $(this);
+		var anchors = topDiv.find('ul.tabs a');
+		var panelDivs = topDiv.find('div.schokolade');
+		var lastAnchor;
+		var lastPanel;
+
+		anchors.show();
+		lastAnchor = anchors.filter('.on');
+		lastPanel = $(lastAnchor.attr('href'));
+		panelDivs.hide();
+		lastPanel.show();
+		
+		anchors.click(function(){
+			//event.preventDefault();
+			var currentAnchor = $(this);
+			var currentPanel = $(currentAnchor.attr('href'));
+			lastAnchor.removeClass('on');
+			lastPanel.hide();
+
+			currentAnchor.addClass('on');
+			currentPanel.show();
+
+			
+			lastAnchor = currentAnchor;
+			lastPanel = currentPanel;
+		});
+
+        });
+    });
+    
+    
+    
+    
+    
+    </script>
+
+    
+    <link href="../css/sub.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+    
+    
+<body>
+<header id="header">
+    <div class="header_inner">
+    <h1 class="logo"><a href="../index.html"><img src="../images/main/gut_logo.png" alt="구트쇼콜라드 로고"></a></h1>
+    
+    <ul id="gnb">
+        <li><a href="../sub/brand.html">BRAND</a></li>
+        <li><a href="../sub/product.html">PRODUCT</a></li>
+        <li><a href="../sub/store.html">STORE</a></li>
+        <li><a href="../sub/gutnews_notice.html">GUT NEWS</a></li>
+        <li><a href="../sub/membership.html">MEMBERSHIP</a></li>
+    </ul><!--gnb종료-->
+
+        
+    </div><!--header_inner--종료-->
+</header><!--header종료-->
+    
+    
+<section id="sub_visual" class="sv3">
+    <div class="visual_txt">
+    <h2>STORE</h2>
+    <p class="sub_stit">항상 달콤하고 편안한 향기가 가득한<br>
+        구트쇼콜라드의 스토어를 소개합니다.</p>
+    <p class="breadcrumb"><a href="../index.html" title="홈으로 가기">HOME &rsaquo;</a> STORE</p>
+        
+    </div><!--visual_txt종료-->
+</section><!--sub_visual종료-->
+    
+    
+
+<div id="contents">
+    <section id="store">
+        
+        <div class="store_img">
+            <h1><img src="../images/sub/store_seo.jpg" alt="서면점"></h1>
+            <p class="img_txt">좋은 채광과 심플한 분위기로 많은 사랑 받는 서면점</p>
+            
+             <h1><img src="../images/sub/store_hae.jpg" alt="해운대점"></h1>
+            <p class="img_txt">따뜻함과 고급스러운 분위기로 많은 사랑 받는 해운대점</p>
+            
+            <h1><img src="../images/sub/store_gwang.jpg" alt="광안점"></h1>
+            <p class="img_txt">NEW OPEN! 편안한 분위기로 힐링할 수 있는 광안점</p>
+        </div>
+    
+        <div class="store_map">
+            <h1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.0250959302693!2d129.05739041560238!3d35.15599486620431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb6feb39fa0d%3A0x17502eaffb28a5b4!2z67aA7IKwSVTqtZDsnKHshLzthLA!5e0!3m2!1sko!2skr!4v1585025935621!5m2!1sko!2skr" width="554" height="393" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></h1>
+            
+            <p class="store_txt">부산광역시 부산진구 부전2동 중앙대로 708</p>
+            
+            <ul >
+                <li><a href="https://www.google.com/maps/place/%EB%B6%80%EC%82%B0IT%EA%B5%90%EC%9C%A1%EC%84%BC%ED%84%B0/@35.15599,129.059579,16z/data=!4m5!3m4!1s0x0:0x17502eaffb28a5b4!8m2!3d35.1559905!4d129.0595791?hl=ko">google map</a></li>
+                
+                <li><a href="https://map.naver.com/v5/search/%EB%B6%80%EC%82%B0it%EA%B5%90%EC%9C%A1%EC%84%BC%ED%84%B0/place/13108087?c=14365904.0750222,4185120.3928663,14,0,0,0,dh">naver map</a></li>
+            
+            </ul>
+            
+            
+            <h1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13047.664222335428!2d129.15162944031198!3d35.15871422810384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d5c0efe075f%3A0x9963b1d5c163ac98!2z7ZW07Jq064yA7ZW07IiY7JqV7J6l!5e0!3m2!1sko!2skr!4v1585026724562!5m2!1sko!2skr" width="554" height="393" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></h1>
+            
+            <p class="store_txt">부산광역시 해운대구 중동</p>
+            
+            <ul >
+                <li><a href="https://www.google.com/maps/place/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5/@35.1586901,129.1593167,18z/data=!4m5!3m4!1s0x35688d5c0efe075f:0x9963b1d5c163ac98!8m2!3d35.1586975!4d129.1603842?hl=ko">google map</a></li>
+                
+                <li><a href="https://map.naver.com/v5/search/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5/place/11491806?c=14377936.7015609,4185372.0552986,14,0,0,0,dh">naver map</a></li>
+            
+            </ul>
+            
+             <h1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13048.55082514367!2d129.10991124031034!3d35.153186279317666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed2f27c70ec7%3A0xff6df0e14d9216fb!2z6rSR7JWI66as7ZW07IiY7JqV7J6l!5e0!3m2!1sko!2skr!4v1585026936178!5m2!1sko!2skr" width="554" height="393" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></h1>
+            
+            <p class="store_txt">부산광역시 수영구 광안2동</p>
+            
+            <ul >
+                <li><a href="https://www.google.com/maps/place/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5/@35.1531556,129.1175877,18z/data=!4m5!3m4!1s0x3568ed2f27c70ec7:0xff6df0e14d9216fb!8m2!3d35.1531696!4d129.118666?hl=ko">google map</a></li>
+                
+                <li><a href="https://map.naver.com/v5/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5/place/11491655?c=14373663.7957945,4184713.0643216,15,0,0,0,dh">naver map</a></li>
+            
+            </ul>
+        </div>
+    
+    </section><!--store종료-->
+</div><!--contents종료-->
+
+
+
+
+<div id="footer">
+    <article class="footer_inner">
+        
+        <p class="foot_logo"><img src="../images/main/gut_footer_logo.png" alt="구트 푸터 로고"></p>
+        
+        <ul class="foot_link">
+        <li><a href="sub/brand.html">홈페이지건의사항</a></li>
+        <li><a href="sub/brand.html">개인정보처리방침</a></li>
+        <li><a href="sub/brand.html">이용약관</a></li>
+        <li><a href="sub/brand.html">사이트맵</a></li>
+        </ul>
+        
+        <address>부산광역시 부산진구 중앙대로 708 부산파이낸스센터 4F,5F<br>
+        개인정보책임관리자 :  이혜진 ※본 페이지는 상업적용도가 아닌 포트폴리오용도로 만든 개인 홈페이지 입니다.※<br>
+        COPYRIGHT 2020 GUT SCHOKOLADE. All rights reserverd.     </address>
+        
+        <ul class="sns">
+            <li><a href="#"><img src="../images/main/sns_facebook.png" alt="페이스북"></a></li>
+            <li><a href="#"><img src="../images/main/sns_insta.png" alt="인스타그램"></a></li>
+        </ul>
+</article><!--footer_inner종료-->
+    
+</div><!--footer종료-->
+</body>
+</html>

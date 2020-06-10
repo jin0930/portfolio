@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>스타피부과</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script> 
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    // 맨위로가기 버튼
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $(".gotop").fadeIn();
+        } else {
+            $(".gotop").fadeOut();
+        }
+    });
+    
+    
+      $(".popup_open").click(function(){
+          $("#popup").slideDown();
+          });
+    $(".popup_close").click(function(){
+        $("#popup").slideUp();                    
+                            
+    });
+    
+     
+    
+      //전체메뉴//
+    $(".all_box").hide();
+    $(".all_menu").click(function(){
+      $(".all_box").fadeIn(); 
+    });
+    
+     $(".close").click(function(){
+      $(".all_box").fadeOut(); 
+    });  
+    
+    
+  //상단메뉴//   
+  $(".dp2,.dp2_bg").hide();
+    
+  $("#gnb>li").mouseover(function(){
+     $(".dp2,.dp2_bg").stop().slideDown(); 
+      
+  });
+    
+      $("#gnb>li").mouseout(function(){
+     $(".dp2,.dp2_bg").stop().slideUp(); 
+      
+  });
+    
+    
+    
+        var slider = $('.main_visual').bxSlider({
+			auto: true, 
+		});
+        
+        
+    
+    // 클릭시 멈춤 현상 해결 //
+		$(document).on('click','.bx-next, .bx-prev',function() {
+		slider.stopAuto();
+		slider.startAuto();
+		slider_01.stopAuto();
+		slider_01.startAuto();
+		});
+		$(document).on('mouseover','.bx-pager, #bx-pager1',function() {
+		slider.stopAuto();
+		slider.startAuto();
+		slider_01.stopAuto();
+		slider_01.startAuto();
+		slider_02.stopAuto();
+		slider_02.startAuto();
+		});	
+    
+    
+        
+        $('.int_img').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true
+        });
+        
+        $('.ba').slick({
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+        });
+    
+    
+});
+</script>
+    
+    
+    
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
+</head>
+    
+<body> 
+    
+    
+<div class="all_box">
+    <p class="all_title">SITEMAP</p>
+     <ul class="all_gnb">
+     <li><a href="#">병원소개</a>
+          <ul class="all_dp2">
+         <li><a href="#">연혁</a></li>
+         <li><a href="#">의료진 소개</a></li>
+         <li><a href="#">진료안내</a></li>
+          <li><a href="#">찾아오는 길</a></li>
+         </ul>
+        </li>
+        
+     <li><a href="#">피부질환 클리닉</a>
+          <ul class="all_dp2">
+         <li><a href="#">백반증</a></li>
+         <li><a href="#">건성</a></li>
+         <li><a href="#">피부염</a>
+         <li><a href="#">무좀</a></li>
+           <li><a href="#">티눈,사마귀</a></li>
+           <li><a href="#">내성발톱</a></li>
+           <li><a href="#">대상포진</a></li>
+            <li><a href="#">화상</a></li>
+         </ul>
+        </li>
+        
+        
+     <li><a href="#">스페셜클리닉</a>
+          <ul class="all_dp2">
+         <li><a href="#">여드름치료프로그램</a></li>
+         <li><a href="#">미백치료프로그램</a></li>
+         <li><a href="#">필러 &amp; 실리프팅</a></li>
+         <li><a href="#">취업전략프로그램</a></li>
+          <li><a href="#">웨딩맞춤프로그램</a></li>
+              <li><a href="#">여름대비프로그램</a></li>
+               <li><a href="#">임산부프로그램</a></li>
+               <li><a href="#">탈모관리프로그램</a></li>
+         </ul>
+        </li>
+        
+        
+     <li><a href="#">피부 클리닉</a>
+            <ul class="all_dp2">
+               <li><a href="#">여드름</a></li>
+                 <li><a href="#">모공</a></li>
+                 <li><a href="#">색소침착</a></li>
+                 <li><a href="#">미백</a></li>
+                 <li><a href="#">탄력주름</a></li>
+                 <li><a href="#">진정보습</a></li>
+                 <li><a href="#">흉터</a></li>
+                 <li><a href="#">기미,홍조</a></li>
+         </ul>
+        </li>
+         
+         
+           <li><a href="#">상담예약</a>
+            <ul class="all_dp2">
+               <li><a href="#">카카오톡 실시간 상담</a></li>
+                 <li><a href="#">의료상담</a></li>
+                 <li><a href="#">진료예약하기</a></li>
+                 <li><a href="#">전화예약</a></li>
+         </ul>
+        </li>
+         
+               <li><a href="#">커뮤니티</a>
+            <ul class="all_dp2">
+               <li><a href="#">치료전후 사진</a></li>
+                 <li><a href="#">치료후기</a></li>
+                 <li><a href="#">이달의 이벤트</a></li>
+                 <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">고객문의</a></li>
+         </ul>
+        </li>
+        </ul><!--gnb종료-->
+    <p class="close"><img src="images/btn_close.jpg" alt="전체메뉴 닫기"></p>
+</div>
+<div id="popup">
+    <section class="popup_img"><img src="images/popup.jpg" alt="청소년 여드름 치료"></section>
+    
+    <p class="popup_close"><a href="#"><input type="checkbox" name="accpet" id="today" value="close">오늘 하루 열지 않기 <span>[닫기]</span></a></p>
+    
+</div>
+<header id="header"> 
+<div id="header1">
+    <section id="header_inner1">
+       <h1><a href="#"><img src="images/%EB%A1%9C%EA%B3%A0.png" alt="로고 이미지"></a></h1>
+        
+        <div class="search">
+            <p class="search_icon">
+            <a href="#"><img src="images/search_icon.png" alt="돋보기 아이콘"></a>
+            </p>
+            <form>
+                <fieldset>
+                <input type="text">
+                </fieldset>
+            </form>
+        </div>
+        
+        <div class="new">
+            <ul>
+            <li>최근인기검색어</li>
+            <li>1. 여드름케어 <span>New</span></li>
+            </ul>
+        </div>
+        
+        <div class="popup_open">
+            <p><a href="#">팝업열기</a></p>
+        </div>
+    </section><!--header_inner1종료-->
+    
+    
+</div><!--header1종료-->
+    
+
+<div id="header2">
+    
+     <section id="header_inner2">
+        
+        <ul id="gnb">
+            <li><a href="#">병원소개</a>
+            <ul class="dp2">
+                   <li><a href="#">연혁</a></li>
+                   <li><a href="#">의료진 소개</a></li>
+                   <li><a href="#">진료안내</a></li>
+                   <li><a href="#">찾아오는 길</a></li>
+                </ul>
+                </li>
+                
+                
+            <li><a href="#">피부질환</a>
+            
+             <ul class="dp2">
+                  <li><a href="#">백반증</a></li>
+                     <li><a href="#">건성</a></li>
+                     <li><a href="#">피부염</a>
+                     <li><a href="#">무좀</a></li>
+                       <li><a href="#">티눈,사마귀</a></li>
+                       <li><a href="#">내성발톱</a></li>
+                       <li><a href="#">대상포진</a></li>
+                        <li><a href="#">화상</a></li>
+                </ul>
+            </li>
+            
+            
+            <li><a href="#">피부클리닉</a>
+                <ul class="dp2">
+                  <li><a href="#">여드름치료프로그램</a></li>
+         <li><a href="#">미백치료프로그램</a></li>
+         <li><a href="#">필러 &amp; 실리프팅</a></li>
+         <li><a href="#">취업전략프로그램</a></li>
+          <li><a href="#">웨딩맞춤프로그램</a></li>
+              <li><a href="#">여름대비프로그램</a></li>
+               <li><a href="#">임산부프로그램</a></li>
+               <li><a href="#">탈모관리프로그램</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">스페셜클리닉</a>
+                
+            <ul class="dp2">
+                  <li><a href="#">여드름</a></li>
+                 <li><a href="#">모공</a></li>
+                 <li><a href="#">색소침착</a></li>
+                 <li><a href="#">미백</a></li>
+                 <li><a href="#">탄력주름</a></li>
+                 <li><a href="#">진정보습</a></li>
+                 <li><a href="#">흉터</a></li>
+                 <li><a href="#">기미,홍조</a></li>
+                </ul>
+            </li>
+            
+            
+            <li><a href="#">상담예약</a>
+                <ul class="dp2">
+                    <li><a href="#">카카오톡 실시간 상담</a></li>
+                 <li><a href="#">의료상담</a></li>
+                 <li><a href="#">진료예약하기</a></li>
+                 <li><a href="#">전화예약</a></li>
+                    </ul>
+            </li>
+            
+            
+            <li><a href="#">커뮤니티</a>
+                <ul class="dp2">
+                <li><a href="#">치료전후 사진</a></li>
+                 <li><a href="#">치료후기</a></li>
+                 <li><a href="#">이달의 이벤트</a></li>
+                 <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">고객문의</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+    <p class="all_menu"><a href="#">전체메뉴</a></p>
+             </section><!--header_inner2종료-->
+
+
+</div><!--header2종료-->
+    
+     <div class="dp2_bg"></div>
+</header>
+    
+    
+<div id="visual">
+    <ul class="main_visual">
+        <li class="mv1">나만을 위한 겨울방학 200% 활용법</li>
+        <li class="mv2">나만을 위한 겨울방학 200% 활용법</li>
+        <li class="mv3">나만을 위한 겨울방학 200% 활용법</li>
+    </ul>
+    
+</div><!--visual종료-->
+    
+<div id="contents">
+    <section id="clinic">
+        <h2>스타 주요클리닉</h2>
+        <p class="clinic_desc">최고의 기술과 서비스로 편리하고 풍요로운 세상을 만들어갑니다.</p>
+        <ul class="clinic_list">
+            <li>
+                <p class="thumbnail"><img src="images/clinic.jpg" alt="여드름 치료프로그램"></p>
+                <p class="clinic_name">여드름 치료 프로그램</p>
+                <p class="service">최상의 서비스를 여러분께<br>선사합니다.</p>
+                <p class="detail_txt"><a href="#">자세히보기</a></p>
+            </li>
+            
+               <li>
+                <p class="thumbnail"><img src="images/clinic2.jpg" alt="필러 & 실리프팅"></p>
+                <p class="clinic_name">필러 &amp; 실리프팅</p>
+                <p class="service">최상의 서비스를 여러분께<br>선사합니다.</p>
+               <p class="detail_txt"><a href="#">자세히보기</a></p>
+            </li>
+            
+            <li>
+                <p class="thumbnail"><img src="images/clinic3.jpg" alt="여름 대비 프로그램"></p>
+                <p class="clinic_name">여름 대비 프로그램</p>
+                <p class="service">최상의 서비스를 여러분께<br>선사합니다.</p>
+                <p class="detail_txt"><a href="#">자세히보기</a></p>
+            </li>
+        
+        </ul>
+</section><!--clinic종료-->
+    
+<div id="introduce">
+    <h2>스타 시술소개</h2>
+    <p class="introduce_desc">오직 스타피부과에서만 특화된 시술을 여러분께 소개합니다</p>
+
+   <section id="introduce_visual">
+       <ul class="int_img">
+           <li><a href="#"><img src="images/introduce_bg_1.jpg" alt="레이저시술"></a></li>
+          <li><a href="#"><img src="images/introduce_bg2.jpg" alt="물광주사"></a></li>
+           <li><a href="#"><img src="images/introduce_bg3.jpg" alt="V 윤곽주사"></a></li>
+       </ul>
+    </section>
+    
+</div><!--introduce종료-->
+
+    <div id="cure">
+
+        
+        <ul class="ba_main">
+            <li><img src="images/ba_main.jpg" alt="스타피부과의 완벽한 치료기술">
+            <p class="cure_title">스타피부과의<br><span>완벽한</span>치료기술</p>
+                <p class="cure_detail"><a href="#">자세히보기</a></p></li>
+            </ul>
+        
+        <div class="cure_right">
+        <section class="cure_txt">
+        <h2>스타 치료 전&#8226;후 사진</h2>
+        <p class="cure_desc">환자 상태에 따라 치료기간 및 치료결과가 달라질 수 있습니다.</p>
+        </section>
+        <ul class="ba slider">
+            <li><img src="images/ba_after.jpg" alt="비포애프터이미지1"></li>
+             <li><img src="images/ba_after2.jpg" alt="비포애프터이미지2"></li>
+             <li><img src="images/ba_after3.jpg" alt="비포애프터이미지3"></li>
+            <li><img src="images/ba_after2.jpg" alt="비포애프터이미지2"></li>
+             <li><img src="images/ba_after3.jpg" alt="비포애프터이미지3"></li>
+             <li><img src="images/ba_after.jpg" alt="비포애프터이미지1"></li>
+            <li><img src="images/ba_after3.jpg" alt="비포애프터이미지3"></li>
+             <li><img src="images/ba_after.jpg" alt="비포애프터이미지1"></li>
+             <li><img src="images/ba_after2.jpg" alt="비포애프터이미지2"></li>
+        </ul>
+        </div>
+    </div><!--cure종료-->
+    
+<div id="video">
+    <h2>스타 홍보영상</h2>
+    <p class="video_desc">다양한 시술로 고객님들의 요구를 충족시켜드립니다.</p>
+    <h1><img src="images/video_img.jpg" alt="스타 피부과 영상"></h1>
+    <p class="video_btn"><a href="#"><img src="images/video_play.png" alt="플레이버튼"></a></p>
+    </div>
+    
+    
+<div id="news">
+    <h2>스타 피부과 병원소식</h2>
+    <p class="news_desc">스타 피부과의 새로운 소식을 전해드립니다.</p>
+    <ul class="event">
+        <li><a href="#"><img src="images/event_img.jpg" alt="홈페이지 리뉴얼 이벤트"></a>
+        <p class="event_title">[이벤트] 홈페이지 리뉴얼기념</p>
+        <p class="event_desc1">기간:2020.02.21~03.14</p>
+        <p class="event_desc2">여러분을 위한 스타피부과의 홈페이지 리뉴얼기념 이벤트를 진행합니다.
+        이벤트 기간동안 스타피부과 방문 고객 모두 다 대상!</p>
+        </li>
+        
+        <li><a href="#"><img src="images/event_img2.jpg" alt="8월 스타피부과 페스티벌"></a>
+        <p class="event_title">[이벤트] 8월 이벤트 대축제</p>
+        <p class="event_desc1">기간:2019.08.01~08.31</p>
+        <p class="event_desc2">올 여름 스타피부과에서 페스티벌 참여하고 푸짐한 경품 까지!
+        스타피부과만의 기술을 가진 레이저시술 3회 이용권을 드립니다.</p>
+        </li>
+        
+        <li><a href="#"><img src="images/event_img3.jpg" alt="베스트 후기 고객님들 찾아라"></a>
+        <p class="event_title">[이벤트] 베스트 후기 고객님들 찾아라</p>
+        <p class="event_desc1">기간:2019.06.15~07.15</p>
+        <p class="event_desc2">후기를 올려주시는 고객님 중 2분을 뽑아 스타피부과만의 기술을 가진
+        레이저시술 1회 이용권을 드립니다.</p>
+        </li>
+    </ul>
+    
+    
+    </div>
+</div><!--conetens종료-->
+    
+<footer id="footer">
+  <div class="footer_inner">
+    <ul class="foot_link">
+      <li><a href="#">홈페이지건의사항</a></li>
+      <li><a href="#"><span>개인정보처리방침</span></a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">사이트맵</a></li>
+      </ul>
+      
+      <address>부산광역시 부산진구 중앙대로 708 부산파이낸스센터 4F,5F<br>
+      개인정보책임관리자:이혜진 ※본 페이지는 상업적용도가 아닌 포트폴리오용도로 만든 개인 홈페이지 입니다.<br>
+      COPYRIGHT 2020 STAR DERMATOLOGY. All rights reserverd.     </address>
+ </div>  
+    
+    </footer><!--footer종료-->
+    
+       <div class="gotop"><a href="#"><img src="images/top_icon.png" alt="위로가기"></a></div>
+
+</body>
+</html>

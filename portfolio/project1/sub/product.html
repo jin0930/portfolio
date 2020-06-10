@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>구트쇼콜라드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+    
+<script>
+    $(document).ready(function(){
+        $('.tabSet').each(function(){
+		var topDiv = $(this);
+		var anchors = topDiv.find('ul.tabs a');
+		var panelDivs = topDiv.find('div.schokolade');
+		var lastAnchor;
+		var lastPanel;
+
+		anchors.show();
+		lastAnchor = anchors.filter('.on');
+		lastPanel = $(lastAnchor.attr('href'));
+		panelDivs.hide();
+		lastPanel.show();
+		
+		anchors.click(function(){
+			//event.preventDefault();
+			var currentAnchor = $(this);
+			var currentPanel = $(currentAnchor.attr('href'));
+			lastAnchor.removeClass('on');
+			lastPanel.hide();
+
+			currentAnchor.addClass('on');
+			currentPanel.show();
+
+			
+			lastAnchor = currentAnchor;
+			lastPanel = currentPanel;
+		});
+
+        });
+    });
+    
+    
+    
+    
+    
+    </script>
+
+    
+    <link href="../css/sub.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+    
+    
+<body>
+<header id="header">
+    <div class="header_inner">
+    <h1 class="logo"><a href="../index.html"><img src="../images/main/gut_logo.png" alt="구트쇼콜라드 로고"></a></h1>
+    
+    <ul id="gnb">
+        <li><a href="../sub/brand.html">BRAND</a></li>
+        <li><a href="../sub/product.html">PRODUCT</a></li>
+        <li><a href="../sub/store.html">STORE</a></li>
+        <li><a href="../sub/gutnews_notice.html">GUT NEWS</a></li>
+        <li><a href="../sub/membership.html">MEMBERSHIP</a></li>
+    </ul><!--gnb종료-->
+
+        
+    </div><!--header_inner--종료-->
+</header><!--header종료-->
+    
+<section id="sub_visual" class="sv2">
+    <div class="visual_txt">
+    <h2>PRODUCT</h2>
+    <p class="sub_stit">구트쇼콜라드만의<br>기술과 품격으로 만들어진 초콜릿을 지금 만나보세요.</p>
+    <p class="breadcrumb"><a href="../index.html" title="홈으로 가기">HOME &rsaquo;</a> PRODUCT</p>
+        
+    </div><!--visual_txt종료-->
+    </section><!--sub_visual종료-->
+    
+<div id="contents">
+    <section id="product">
+        
+    <div class="tabSet">
+		<ul class="tabs">
+			<li><a href="#dark" class="on">DARK SCHOKLADE</a></li>
+			<li><a href="#milk">MILK SCHOKOLADE</a></li>
+			<li><a href="#white">WHITE SCHOKOLADE</a></li>
+		</ul>
+		<div class="schokolades">
+			<div class="schokolade" id="dark">
+
+                <ul class="product_list">
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img1.png" alt="다크 파베"></a>
+                    <p class="product_name">다크 파베<br> <span>쌉싸름한 다크와 달콤한 파베의 조화</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img2.png" alt="써클 쇼콜라드"></a>
+                    <p class="product_name">써클 쇼콜라드<br> <span>베이직한 다크 맛에 귀여운 동그란모양</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img3.png" alt="밀크 쿠키"></a>
+                    <p class="product_name">밀크 쿠키<br> <span>우유맛 베이스에 구트 초콜릿이 가득</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img4.png" alt="화이트 캬라멜"></a>
+                    <p class="product_name">화이트 캬라멜<br> <span>화이트 초콜릿과 은은한 캬라말향의 만남</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img5.png" alt="더블 코코아 볼"></a>
+                    <p class="product_name">더블 코코아 볼<br> <span>코코아가루 가득 더욱 더 풍부한 맛을</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img6.png" alt="피넛버터 쿠키"></a>
+                    <p class="product_name">피넛버터 쿠키<br> <span>저지방 피넛버터 크림이 쿠키위에 듬뿍</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img7.png" alt="베리 밀크"></a>
+                    <p class="product_name">베리 밀크<br> <span>밀크에 상큼한 라즈베리 소스가 듬뿍</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img8.png" alt="패션후르츠 쇼콜라드"></a>
+                    <p class="product_name">패션후르츠 쇼콜라드<br> <span>상큼한 패션후르츠와 화이트의 조화</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img9.png" alt="오렌지 볼"></a>
+                    <p class="product_name">오렌지 볼<br> <span>오렌지 제스트를 넣어 풍미 가득한 향</span></p></li>
+
+                </ul>
+    </div>
+            
+			<div class="schokolade" id="milk">
+                <ul class="product_list">
+                    
+               <li><a href="#"><img src="../images/sub/choco_img1.png" alt="다크 파베"></a>
+                    <p class="product_name">다크 파베<br> <span>쌉싸름한 다크와 달콤한 파베의 조화</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img2.png" alt="써클 쇼콜라드"></a>
+                    <p class="product_name">써클 쇼콜라드<br> <span>베이직한 다크 맛에 귀여운 동그란모양</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img3.png" alt="밀크 쿠키"></a>
+                    <p class="product_name">밀크 쿠키<br> <span>우유맛 베이스에 구트 초콜릿이 가득</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img4.png" alt="화이트 캬라멜"></a>
+                    <p class="product_name">화이트 캬라멜<br> <span>화이트 초콜릿과 은은한 캬라말향의 만남</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img5.png" alt="더블 코코아 볼"></a>
+                    <p class="product_name">더블 코코아 볼<br> <span>코코아가루 가득 더욱 더 풍부한 맛을</span></p></li>
+                    
+                    <li><a href="#"><img src="../images/sub/choco_img6.png" alt="피넛버터 쿠키"></a>
+                    <p class="product_name">피넛버터 쿠키<br> <span>저지방 피넛버터 크림이 쿠키위에 듬뿍</span></p></li>
+                    
+                </ul>
+                
+            </div>
+			<div class="schokolade" id="white">
+                
+                <ul class="product_list">
+                
+                    <li><a href="#"><img src="../images/sub/choco_img1.png" alt="다크 파베"></a>
+                    <p class="product_name">다크 파베<br> <span>쌉싸름한 다크와 달콤한 파베의 조화</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img2.png" alt="써클 쇼콜라드"></a>
+                    <p class="product_name">써클 쇼콜라드<br> <span>베이직한 다크 맛에 귀여운 동그란모양</span></p></li>
+                    
+                     <li><a href="#"><img src="../images/sub/choco_img3.png" alt="밀크 쿠키"></a>
+                    <p class="product_name">밀크 쿠키<br> <span>우유맛 베이스에 구트 초콜릿이 가득</span></p></li>
+
+            
+                </ul>
+            </div>
+		<!-- /schokolades --></div>
+	<!-- /tabset --></div>
+    </section><!--product종료-->
+    </div><!--contents종료-->
+
+<div id="footer">
+    <article class="footer_inner">
+        
+        <p class="foot_logo"><img src="../images/main/gut_footer_logo.png" alt="구트 푸터 로고"></p>
+        
+        <ul class="foot_link">
+        <li><a href="sub/brand.html">홈페이지건의사항</a></li>
+        <li><a href="sub/brand.html">개인정보처리방침</a></li>
+        <li><a href="sub/brand.html">이용약관</a></li>
+        <li><a href="sub/brand.html">사이트맵</a></li>
+        </ul>
+        
+        <address>부산광역시 부산진구 중앙대로 708 부산파이낸스센터 4F,5F<br>
+        개인정보책임관리자 :  이혜진 ※본 페이지는 상업적용도가 아닌 포트폴리오용도로 만든 개인 홈페이지 입니다.※<br>
+        COPYRIGHT 2020 GUT SCHOKOLADE. All rights reserverd.     </address>
+        
+        <ul class="sns">
+            <li><a href="#"><img src="../images/main/sns_facebook.png" alt="페이스북"></a></li>
+            <li><a href="#"><img src="../images/main/sns_insta.png" alt="인스타그램"></a></li>
+        </ul>
+</article><!--footer_inner종료-->
+    
+</div><!--footer종료-->
+</body>
+</html>

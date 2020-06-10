@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>탭 콘텐츠 - 기본형 | jQuery book demos</title>
+<style>
+*{margin:0;	padding:0;}
+
+.all{
+	width:760px;
+	margin:auto;
+}
+.tabSet{
+	margin-bottom:30px;
+}
+ul{
+	overflow:hidden;
+	padding:20px 20px 0;
+	background-color:#31374c;
+}
+	ul li{
+		float:left;
+		padding:0 2px 0 0;
+		list-style-type:none;
+	}
+		ul li a{
+			float:left;
+			color:#fff;
+			background:#0b1023;
+			padding:.5em 2.75em;
+			display:none;
+			border-radius:3px 3px 0 0;
+			font-weight:bold;
+			font-size:14px;
+			text-decoration:none;
+		}
+		ul li a:hover{
+			text-decoration:underline;
+		}
+		ul li a.on{
+			background:#fff;
+			cursor:default;
+			color:#31374c;
+		}
+		ul li a.on:hover{
+			text-decoration:none;
+		}
+.panels{
+	background:#fff;
+	min-height:180px;
+}
+.panel{
+	padding:30px 30px;
+	font-size:14px;
+	color:#4d4d4d;
+}
+
+    
+    
+    /*미니슬라이드*/
+    #banner_wrap{position:relative;width:100%;margin:0 auto;}
+#slide_banner {text-align: center}
+#slide_banner img{width:100%}
+#prevBtn{position:absolute;left:0;top:10px;}
+#nextBtn{position:absolute;right:15px;top:10px;}
+    
+</style>
+<link rel="stylesheet" href="css/jquery.bxslider.css">    
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>    
+<script>
+  $(function(){
+	$('.tabSet').each(function(){
+		var topDiv = $(this);
+		var anchors = topDiv.find('ul.tabs a');
+		var panelDivs = topDiv.find('div.panel');
+		var lastAnchor;
+		var lastPanel;
+
+		anchors.show();
+		lastAnchor = anchors.filter('.on');
+		lastPanel = $(lastAnchor.attr('href'));
+		panelDivs.hide();
+		lastPanel.show();
+		
+		anchors.click(function(){
+			//event.preventDefault();
+			var currentAnchor = $(this);
+			var currentPanel = $(currentAnchor.attr('href'));
+			lastAnchor.removeClass('on');
+			lastPanel.hide();
+
+			currentAnchor.addClass('on');
+			currentPanel.show();
+
+			
+			lastAnchor = currentAnchor;
+			lastPanel = currentPanel;
+		});
+	});
+      
+     //슬라이드 
+    $('.bxslider').bxSlider({
+            captions:true,
+            //slideWidth:600,  //수정
+            auto:true,
+            autoControls:true,
+            stopAutoOnclick:true,
+
+          }); 
+      
+    //미니슬라이드
+      var mySlider=$("#slide_banner").bxSlider({
+      mode:"horizontal",   // 가로 수평으로 슬라이드 됩니다.
+      speed:500,              // 이동 속도를 설정합니다.
+      pager:false,            // 현재 위치 페이징 표시 여부 설정.
+      moveSlides:1,         // 슬라이드 이동시 갯수 설정.
+      slideWidth:500,        // 슬라이드 마다 너비 설정.
+      minSlides:2,           // 최소 노출 개수를 설정합니다.
+      maxSlides:2,          // 최대 노출 개수를 설정합니다.
+      slideMargin:10,      // 슬라이드간의 간격을 설정합니다.
+      auto:true,             // 자동으로 흐를지 설정합니다.
+      autoHover:true,    // 마우스 오버시 정시킬지 설정합니다.
+      controls:false        // 이전 다음 버튼 노출 여부 설정합니다.
+   });
+//이전 버튼을 클릭하면 이전 슬라이드로 전환됩니다.
+   $("#prevBtn").on("click",function(){
+    mySlider.goToPrevSlide();  //이전 슬라이드 배너로 이동됩니다.
+    return false; //<a>에 링크를 차단합니다.
+   });
+//다음 버튼을 클릭하면 다음 슬라이드로 전환됩니다.
+   $("#nextBtn").on("click",function(){
+    mySlider.goToNextSlide();  //다음 슬라이드 배너로 이동됩니다.
+    return false;
+   });
+  });
+
+</script>
+</head>
+<body>
+<div class="all">
+
+	<div class="tabSet">
+		<ul class="tabs">
+			<li><a href="#panel1-1" class="on">panel 1</a></li>
+			<li><a href="#panel1-2">panel 2</a></li>
+			<li><a href="#panel1-3">panel 3</a></li>
+			<li><a href="#panel1-4">panel 4</a></li>
+		</ul>
+		<div class="panels">
+			<div class="panel" id="panel1-1">
+               <div class="bxslider">
+        <div>
+          <img src="images/things-1.jpeg" title="슬라이더 연습-1"> 
+        </div>
+        <div>
+          <img src="images/things-2.jpeg" title="슬라이더 연습-2">
+        </div>
+        <div>
+          <img src="images/things-3.jpeg" title="슬라이더 연습-3">
+        </div>         
+        <div>
+          <img src="images/things-4.jpeg" title="슬라이더 연습-4">
+        </div>      
+      </div> 
+            
+            </div>
+			<div class="panel" id="panel1-2">
+               <div id="banner_wrap">
+      <ul id="slide_banner">
+         <li><a href="#"><img src="images/pic_t1.jpg" alt="사진1" /></a></li>
+         <li><a href="#"><img src="images/pic_t2.jpg" alt="사진2" /></a></li>
+         <li><a href="#"><img src="images/pic_t3.jpg" alt="사진3" /></a></li>
+         <li><a href="#"><img src="images/pic_t4.jpg" alt="사진4" /></a></li>
+         <li><a href="#"><img src="images/pic_t5.jpg" alt="사진5" /></a></li>
+         <li><a href="#"><img src="images/pic_t6.jpg" alt="사진6" /></a></li>
+         <li><a href="#"><img src="images/pic_t7.jpg" alt="사진7" /></a></li>
+         <li><a href="#"><img src="images/pic_t8.jpg" alt="사진8" /></a></li>
+      </ul>
+      <p><a href="#" id="prevBtn"><img src="images/prev_btn.png" alt="이전버튼" /></a></p>
+      <p><a href="#" id="nextBtn"><img src="images/next_btn.png" alt="다음버튼" /></a></p>
+   </div>
+            
+            </div>
+			<div class="panel" id="panel1-3">At ipsum scripta efficiantur nec. Perpetua vituperata quaerendum vix ne, pri ne veri liber apeirian. Vidisse lucilius facilisi ei vix, vim ei quod esse atqui, error placerat molestiae eam cu. Denique albucius quo ad, eos eu malis assum.</div>
+			<div class="panel" id="panel1-4">At malis laoreet his. Ex vix prima primis, ne qui iudico alienum. Te enim iriure fuisset eos, ei mei nihil saepe soleat, has alienum postulant in. Quem accusamus constituam qui ea, id dolorum expetendis per. Vis in ferri quaeque. Suscipit phaedrum vulputate cum eu. Usu te quot ignota timeam, ex sed magna nusquam, ex eum esse omnis.</div>
+		<!-- /panels --></div>
+	<!-- /tabset --></div>
+
+	<div class="tabSet">
+		<ul class="tabs">
+			<li><a href="#panel2-1">panel 1</a></li>
+			<li><a href="#panel2-2">panel 2</a></li>
+			<li><a href="#panel2-3" class="on">panel 3</a></li>
+			<li><a href="#panel2-4">panel 4</a></li>
+			<li><a href="#panel2-5">panel 5</a></li>
+		</ul>
+		<div class="panels">
+			<div class="panel" id="panel2-1">Lorem ipsum dolor sit amet, pro at justo commune copiosae, quas euismod qui an. Et dicta percipitur reformidans usu, dicta fierent no his. Meis inani te cum, ponderum assueverit cu duo. No vocent commune quo, purto justo pericula eu per. Ius putent commodo euripidis in, eligendi appetere ne ius.</div>
+			<div class="panel" id="panel2-2">Sit qualisque hendrerit te, ne sit torquatos interpretaris. Ius graece option legimus an, vix summo dolorem blandit an. Nisl patrioque quo ad. Ut duo augue paulo, fabulas sapientem ne mea, ut duo detraxit salutandi definiebas. Pro at unum petentium, meliore consetetur has in, et mutat percipit vim. In eruditi fabellas vis, ex eruditi legimus necessitatibus quo. Eos in alterum ceteros adipiscing, te accumsan pertinacia instructior ius.</div>
+			<div class="panel" id="panel2-3">At ipsum scripta efficiantur nec. Perpetua vituperata quaerendum vix ne, pri ne veri liber apeirian. Vidisse lucilius facilisi ei vix, vim ei quod esse atqui, error placerat molestiae eam cu. Denique albucius quo ad, eos eu malis assum.</div>
+			<div class="panel" id="panel2-4">At malis laoreet his. Ex vix prima primis, ne qui iudico alienum. Te enim iriure fuisset eos, ei mei nihil saepe soleat, has alienum postulant in. Quem accusamus constituam qui ea, id dolorum expetendis per. Vis in ferri quaeque. Suscipit phaedrum vulputate cum eu. Usu te quot ignota timeam, ex sed magna nusquam, ex eum esse omnis.</div>
+			<div class="panel" id="panel2-5">Quo cu hinc purto quando. Eu eam nobis complectitur, eam nobis percipit in. Case aperiam ancillae in nam. Ea alia veniam mel, in eum propriae intellegat. Suas vocent pri ne, te quod cibo vim.</div>
+		<!-- /panels --></div>
+	<!-- /tabset --></div>
+
+</div>
+</body>
+</html>
