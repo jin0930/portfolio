@@ -86,8 +86,8 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 500px;
+    padding-bottom: 250px;
 }
 
 header img {
@@ -190,8 +190,8 @@ section .w_p {
 
 section.success {
     color: #666;
-    background: #f4f7ea;
-}
+    background: #f4f7ea;}
+
 
 .i_line {font-size:4rem;  border-bottom: solid 3px #666; font-weight:500; padding-bottom: 17px;}
 
